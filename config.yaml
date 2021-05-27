@@ -20,14 +20,21 @@ params:
     - name: LinkedIn
       icon: linkedin
       url: https://www.linkedin.com/in/owenvalentine/
+  sourceurl: https://github.com/chessmango/remount.ro
 menu:
   main:
     - name: Home
       url: /
       weight: 1
-    - name: All posts
+    - name: Posts
       url: /posts
       weight: 2
+    - name: Tags
+      url: /tags
+      weight: 3
     - name: About
       url: /about
-      weight: 3
+      weight: 4
+frontmatter:
+  lastmod:
+    - lastmod
