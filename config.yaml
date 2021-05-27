@@ -1,0 +1,33 @@
+baseURL: https://remount.ro/
+languageCode: en-za
+title: Remount R/O
+theme: archie
+permalinks:
+  posts: /:year/:month/:filename/
+copyright: Owen Valentine
+paginate: 5
+params:
+  mode: auto
+  useCDN: false
+  subtitle: I'll waste my time on lengthy projects so you can read about them and realize you're better off ignoring them, probably
+  social:
+    - name: GitHub
+      icon: github
+      url: https://github.com/chessmango
+    - name: Twitter
+      icon: twitter
+      url: https://twitter.com/chessmango
+    - name: LinkedIn
+      icon: linkedin
+      url: https://www.linkedin.com/in/owenvalentine/
+menu:
+  main:
+    - name: Home
+      url: /
+      weight: 1
+    - name: All posts
+      url: /posts
+      weight: 2
+    - name: About
+      url: /about
+      weight: 3
