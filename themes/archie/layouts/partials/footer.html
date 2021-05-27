@@ -1,0 +1,18 @@
+<footer>
+<hr>
+<div class="social">
+⚡️ {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} |{{ end }}{{- range $index, $key := .Site.Params.Social -}}<a class="soc" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>|{{- end -}}
+</div>
+<div class="credit">
+{{ if isset .Site.Params "sourceurl" }}<a href="{{ .Site.Params.sourceurl }}">Source</a> | {{ end }}<a href="https://creativecommons.org/licenses/by/4.0/">CC BY</a> | <a href="https://github.com/athul/archie">Theme</a> | <a href="https://gohugo.io">Hugo</a>
+</div>
+</footer>
+{{ if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}
+
+{{- if (isset .Site.Params "social") -}}
+<script>
+      feather.replace()
+</script>
+{{- end -}}

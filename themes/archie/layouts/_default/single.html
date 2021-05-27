@@ -1,0 +1,35 @@
+{{ define "main" }}
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">{{ .Title }}</h1>
+			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+			{{ if isset .Params "lastmod" }}
+			<div class="meta">Modified on {{ dateFormat "Jan 2, 2006" .Lastmod }}</div>
+			{{ end }}
+		</div>
+		{{ if isset .Params "tldr" }}
+		<div class="tldr">
+			<strong>TL;DR:</strong>
+			{{ .Params.tldr | safeHTML }}
+		</div>{{ end }}
+
+		<section class="body">
+			{{ .Content }}
+		</section>
+
+		<div class="post-tags">
+			{{ if ne .Type "page" }}
+			{{ if gt .Params.tags 0 }}
+			<nav class="nav tags">
+				Tags:
+				{{ range .Params.tags }}
+				🏷<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+				{{ end }}
+			</nav>
+			{{ end }}
+			{{ end }}
+		</div>
+	</article>
+</main>
+{{ end }}
