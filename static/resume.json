@@ -1,0 +1,201 @@
+{
+  "basics": {
+    "name": "Owen Valentine",
+    "label": "System/Network/Cloud Engineer",
+    "picture": "https://s.gravatar.com/avatar/eb9ef221f303f864581a78fc7a7dd015?s=256",
+    "email": "owenvalentine+resume@gmail.com",
+    "phone": "",
+    "website": "https://remount.ro",
+    "summary": "Owen is a seasoned Software Development-adjacent System/Network/Cloud Engineer, most recently at Amazon Web Services. Skilled at Consultation, Technical Support, Technical Documentation, Linux System Engineering, Virtualization and Technical Training",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Cape Town",
+      "countryCode": "ZA",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "owenvalentine",
+        "url": "https://www.linkedin.com/in/owenvalentine"
+      },
+      {
+        "network": "Keybase",
+        "username": "chessmango",
+        "url": "https://keybase.io/chessmango"
+      },
+      {
+        "network": "GitHub",
+        "username": "chessmango",
+        "url": "https://github.com/chessmango"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Amazon Web Services",
+      "position": "Cloud Support Engineer",
+      "website": "https://aws.amazon.com",
+      "startDate": "2019-06-01",
+      "summary": "AWS is (currently) the world's leading public cloud provider, and a pioneer in the cloud space",
+      "highlights": [
+        "Pioneered the AWS Premium Support Andon Program (PSAP) in Cape Town",
+        "Trained >80 engineers globally on Docker, containerization and ECS/Fargate",
+        "Maintained a perfect customer satisfaction record",
+        "Became a go-to engineer (in a team of >60) for basically any topic in short time",
+        "Member of ECS (Elastic Container Service) and CloudEndure support operations"
+      ]
+    },
+    {
+      "company": "Umanix",
+      "position": "Senior System/Network Engineer",
+      "website": "https://www.umanix.co.za",
+      "startDate": "2018-02-01",
+      "endDate": "2019-05-31",
+      "summary": "Umanix is a small but above-weight-punching Managed Service Provider specializing in Linux, virtualization and cool internet tech",
+      "highlights": [
+        "Managed, maintained and improved full tech stack (Hypervisor cluster, LXC, Nginx, Java, MySQL, LXC) for a large-footprint local BI SaaS provider",
+        "Set up and maintained the company's helpdesk system, running Zammad, a Rails app with Postgresql and Elasticsearch",
+        "Drove company direction and strategy",
+        "Oversaw the work and training of three technicians, serving as an escalation point"
+      ]
+    },
+    {
+      "company": "Huge Networks",
+      "position": "System Administrator",
+      "website": "https://www.hugenetworks.co.za",
+      "startDate": "2016-02-01",
+      "endDate": "2018-01-31",
+      "summary": "Huge Networks is a national Internet Service Provider, providing ADSL, Fibre and Wireless access at various levels, with an enterprise/telecoms focus",      
+      "highlights": [
+        "Deployed, maintained and improved a number of POP3/IMAP/SMTP servers, as well as LAMP hosting infrastructure",
+        "Managed and maintained RADIUS and proxy RADIUS servers for DSL realms and other PPPoE uses"
+      ]
+    },
+    {
+      "position": "Technical Support Agent",
+      "startDate": "2015-08-01",
+      "endDate": "2016-01-31",
+      "highlights": [
+        "Handled technical calls and emails from customers, covering all services provided by Huge Networks",
+        "Installed wireless/fibre equipment and handled technical support at customer sites"
+      ]
+    },
+    {
+      "company": "JustHost",
+      "position": "Owner/Founder",
+      "startDate": "2013-03-01",
+      "endDate": "2016-06-30",
+      "summary": "Founded and ran a small web hosting business for >3 years. A small number of very happy customers"
+    },
+    {
+      "company": "Hudson Park Primary school",
+      "position": "Junior System Administrator",
+      "website": "http://www.hpps.co.za",
+      "startDate": "2012-03-01",
+      "endDate": "2015-07-31",
+      "summary": "Hudson Park Primary School is a prominent Eastern Cape institution, educating >1000 students annually"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Cambridge Primary School",
+      "position": "IT Technician",
+      "website": "https://www.cambridgeprimary.co.za",
+      "startDate": "2010-06-01",
+      "endDate": "2012-02-29"
+    },
+    {
+      "organization": "ITEC",
+      "position": "Web Services Provider/Consultant",
+      "website": "https://www.itec.org.za",
+      "startDate": "2013-03-01",
+      "endDate": "2019-06-30"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Amazon Web Services",
+      "studyType": "AWS Certified Solutions Architect - Associate",
+      "startDate": "2019-10-15"
+    },
+    {
+      "institution": "Cambridge High School",
+      "studyType": "National Senior Certificate",
+      "startDate": "2004-01-01",
+      "endDate": "2008-12-31",
+      "courses": [
+        "English First Language",
+        "Afrikaans Second Language",
+        "Mathematical Literacy",
+        "Life Orientation",
+        "History",
+        "Biology",
+        "Geography"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "System Engineering",
+      "level": "Expert",
+      "keywords": [
+        "Networking",
+        "Load Balancing",
+        "Web Applications",
+        "Nginx",
+        "MySQL",
+        "Ruby",
+        "Python",
+        "PHP",
+        "Node.js",
+        "Java",
+        "SMTP",
+        "POP3",
+        "IMAP"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "Expert",
+      "keywords": [
+        "Red Hat",
+        "CentOS",
+        "Ubuntu",
+        "Kernel",
+        "Troubleshooting"
+      ]
+    },
+    {
+      "name": "Cloud Architecture",
+      "level": "Professional",
+      "keywords": [
+        "AWS",
+        "Azure",
+        "GCP",
+        "OCI",
+        "VPC",
+        "CloudEndure",
+        "ECS",
+        "EC2",
+        "RDS",
+        "ElastiCache"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native proficiency"
+    },
+    {
+      "language": "Afrikaans",
+      "fluency": "Working proficiency"
+    },
+    {
+      "language": "Xhosa",
+      "fluency": "Limited working proficiency"
+    }
+  ]
+}
