@@ -1,4 +1,4 @@
-#baseURL: https://remount.ro
+baseURL: /
 languageCode: en-za
 title: Remount R/O
 theme: archie
