@@ -23,16 +23,16 @@ params:
   sourceurl: https://github.com/chessmango/remount.ro
 menu:
   main:
-    - name: Home
+    - name: /
       url: /
       weight: 1
-    - name: Posts
+    - name: posts
       url: /posts
       weight: 2
-    - name: Tags
+    - name: tags
       url: /tags
       weight: 3
-    - name: About
+    - name: about
       url: /about
       weight: 4
 frontmatter:
