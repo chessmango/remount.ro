@@ -5,4 +5,4 @@ draft: false
 ---
 ## Hey friends
 
-[Resumé](/resume.html). Also in [JSON](/resume.json) and [PDF](/resume.pdf).
+[Resumé](/resume). Also in [JSON](/resume.json) and [PDF](/resume.pdf).
