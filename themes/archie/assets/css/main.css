@@ -155,18 +155,34 @@ h4::before { color: var(--maincolor); content: '#### '; }
 h5::before { color: var(--maincolor); content: '##### '; }
 h6::before { color: var(--maincolor); content: '###### '; }
 
+.meta {
+  color: #999;
+  letter-spacing: -0.5px;
+}
+
 /* Footer */
 footer {
-  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  border-top: 0.4rem dotted var(--bordercl);
+  padding: 2rem 0rem;
+  margin-top: 2rem;
+}
+.soc {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 2px solid;
+  border-bottom: none;
+}
+.footer-info {
+  padding: var(--footer-padding);
 }
 
 /* Common */
 .title h1 {
   margin-bottom: 0;
-}
-
-.tldr {
-  font-size: 1.2rem;
 }
 
 time {
@@ -294,4 +310,21 @@ color: royalblue ;
 content: 'Markdown';
 background: royalblue;
 color: whitesmoke ;
+}
+
+/* table */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th{
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+  font-size: large;
+}
+
+table td{
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
 }
