@@ -17,7 +17,6 @@ tags:
 draft: false
 ---
 
-
 [Kolide] seems like a cool company. I've never used their commercial offering, but Kolide Fleet[^fleet] is pretty and works well, and Kolide osquery Launcher[^launcher] is pretty great for [osquery] without much headache.
 
 {{< callout text="This post is *not* sponsored by Kolide, promise" >}}
@@ -29,17 +28,17 @@ I set things up according to [bare necessity] and had good success, but there's 
 
 So we use a Network Load Balancer. How do we handle TLS? Unfortunately, that's where things get iffy. Amazon-issued certificates are for AWS services only, so you get your certificates ([acme.sh] is my poison, with [Let's Encrypt] as provider) and either:
 
-* Copy the certs as part of your container build
-  * Rebuild your container image every time you replace a cert
-  * Perhaps this isn't that big a deal
+- Copy the certs as part of your container build
+  - Rebuild your container image every time you replace a cert
+  - Perhaps this isn't that big a deal
 
 **OR**
 
-* Import certs into [ACM] and pull them from the container directly
-  * Cool, easy cert replacement
-  * Feels nice because it's all cloudy
-  * But your private key can't be pulled from ACM
-  * Gotta use [SSM Parameter Store] for private key
+- Import certs into [ACM] and pull them from the container directly
+  - Cool, easy cert replacement
+  - Feels nice because it's all cloudy
+  - But your private key can't be pulled from ACM
+  - Gotta use [SSM Parameter Store] for private key
 
 You could arguably just use Parameter Store for all the moving parts, but ACM is nicer because it tells you when things expire ¯\\\_\(ツ\)\_/¯
 
@@ -48,48 +47,49 @@ So seeing as we're cloud-crazy (?) and want to make all of this serverless at ev
 
 Without further ado, enter a [handy set] of sample [CloudFormation] templates that'll get you going, as well as a [`Dockerfile`] and modified [`run.sh`] for Kolide Fleet's container. The template order is quite intentional, infrastructure first:
 
-* [`01-ecr.yml`]
-  * Creates an ECR repository, 'nuff said
-  * Use the outputs from this (including a handy dandy `ecr get-login-password | docker login` snippet!) to push your container image
-* [`02-kms.yml`]
-  * Creates a KMS key for:
-    * SSL certificate private key stored as SecureString SSM parameter
-    * RDS Aurora master password, stored in [Secrets Manager]
-    * RDS Aurora cluster encryption at rest
-    * ElastiCache Redis cluster encryption at rest
-  * Manually use the KMS ID to encrypt a new SecureString SSM parameter for your SSL certificate private key, and note the parameter name
-  * At the same time, import your cert, private key and full chain into ACM, note the certificate ARN
-* [`03-vpc.yml`]
-  * Creates a VPC with:
-    * CIDR 10.0.0.0/16
-    * 1x public and 1x private subnet and routes in AZ a and b for your region
-  * The earlier the better - there's a lot to provision here :D
-* [`04-security-groups.yml`]
-  * Creates security groups for:
-    * Kolide service on Fargate
-    * ElastiCache for Redis
-    * Aurora for MySQL
-  * Depends on [`03-vpc.yml`]
-* [`05-rds-aurora.yml`]
-  * Generates a master password and stores it with Secrets Manager
-  * Creates an RDS Aurora MySQL cluster
-* [`06-redis.yml`]
-  * Creates an ElastiCache Redis cluster
-* [`07-network-load-balancer.yml`]
-  * Creates a Network Load Balancer for use with the Kolide service
-  * Outputs a FQDN, for targeting wherever you keep your DNS
-* [`kolide.yml`]
-  * Creates suitable IAM roles and policies for Kolide tasks and orchestration
-  * Creates an ECS task definition along with two container definitions
-    * One container redirects port 80 to 443 with Nginx
-    * The other container is Kolide Fleet, and gets environment variables according to all the fancy resources defined above
+- [`01-ecr.yml`]
+  - Creates an ECR repository, 'nuff said
+  - Use the outputs from this (including a handy dandy `ecr get-login-password | docker login` snippet!) to push your container image
+- [`02-kms.yml`]
+  - Creates a KMS key for:
+    - SSL certificate private key stored as SecureString SSM parameter
+    - RDS Aurora master password, stored in [Secrets Manager]
+    - RDS Aurora cluster encryption at rest
+    - ElastiCache Redis cluster encryption at rest
+  - Manually use the KMS ID to encrypt a new SecureString SSM parameter for your SSL certificate private key, and note the parameter name
+  - At the same time, import your cert, private key and full chain into ACM, note the certificate ARN
+- [`03-vpc.yml`]
+  - Creates a VPC with:
+    - CIDR 10.0.0.0/16
+    - 1x public and 1x private subnet and routes in AZ a and b for your region
+  - The earlier the better - there's a lot to provision here :D
+- [`04-security-groups.yml`]
+  - Creates security groups for:
+    - Kolide service on Fargate
+    - ElastiCache for Redis
+    - Aurora for MySQL
+  - Depends on [`03-vpc.yml`]
+- [`05-rds-aurora.yml`]
+  - Generates a master password and stores it with Secrets Manager
+  - Creates an RDS Aurora MySQL cluster
+- [`06-redis.yml`]
+  - Creates an ElastiCache Redis cluster
+- [`07-network-load-balancer.yml`]
+  - Creates a Network Load Balancer for use with the Kolide service
+  - Outputs a FQDN, for targeting wherever you keep your DNS
+- [`kolide.yml`]
+  - Creates suitable IAM roles and policies for Kolide tasks and orchestration
+  - Creates an ECS task definition along with two container definitions
+    - One container redirects port 80 to 443 with Nginx
+    - The other container is Kolide Fleet, and gets environment variables according to all the fancy resources defined above
 
 \
 Once done, you're done! This may take some time - I have some further plans for testing and seamlessness, namely:
-* Investigate using TLS termination at the NLB, potentially (?) retaining HTTP/2
-  * This would mean being able to use Amazon-issued public certs, and therefore avoiding awkward ACM imports and SSM parameters
-* Create a meta-template that spawns all the stacks involved and saves a bunch of manual work
-  * Even better if terminating TLS at the NLB - no more human dependency
+
+- Investigate using TLS termination at the NLB, potentially (?) retaining HTTP/2
+  - This would mean being able to use Amazon-issued public certs, and therefore avoiding awkward ACM imports and SSM parameters
+- Create a meta-template that spawns all the stacks involved and saves a bunch of manual work
+  - Even better if terminating TLS at the NLB - no more human dependency
 
 \
 That's it for now! Give that [repo] a watch - I'm likely to push a second branch at some point after testing TLS on NLB, along with some instructions away from this blog, probably. Let me know what you think in the comments below! And feel free to file an issue on GitHub if you see one ;)

@@ -10,4 +10,3 @@ tags:
   - foobar
 draft: true
 ---
-
