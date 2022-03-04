@@ -5,15 +5,15 @@ date: 2020-08-12T17:21:02+02:00
 lastmod: 2021-02-11T17:21:02+02:00
 tldr: I worked my way through a Kolide Fleet deployment on AWS Fargate a week ago, and have turned the results into a set of CloudFormation templates for your consumption. GitHub repo available <a href="https://github.com/chessmango/kolide-fleet-on-fargate">here</a>.
 tags:
-  - aws
-  - fargate
-  - container
-  - serverless
-  - iac
   - aurora
+  - aws
+  - container
   - ecs
+  - fargate
+  - iac
   - mysql
   - redis
+  - serverless
 draft: false
 ---
 
