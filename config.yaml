@@ -10,6 +10,8 @@ pygmentscodefences: true
 pygmentscodefencesguesssyntax: true
 paginate: 5
 params:
+  favicon: /favicon.png
+  og_image: /favicon.png
   mode: toggle
   useCDN: false
   subtitle: I'll waste my time on lengthy projects so you can read about them and realize you're better off ignoring them, probably
