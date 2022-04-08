@@ -36,15 +36,28 @@
     {
       "name": "Snapt",
       "url": "https://www.snapt.net",
-      "description": "Snapt provides high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
+      "description": "Snapt builds high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
+      "position": "DevOps/Test Engineer",
+      "startDate": "2022-04-01",
+      "highlights": [
+        "Moved into DevOps/testing role after getting more involved over time",
+        "Created and maintained API and product documentation on various platforms",
+        "More to come!"
+      ]
+    },
+    {
+      "name": "Snapt",
+      "url": "https://www.snapt.net",
+      "description": "Snapt builds high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
       "position": "IT Systems Engineer",
       "startDate": "2020-11-01",
+      "endDate": "2022-03-31",
       "highlights": [
         "Trained and upskilled technical and non-technical staff alike on various cloud platforms, technologies and trends",
         "Created and maintained an automation framework with Terraform, to provision ephemeral, short-lived demo environments for customer ease",
         "Co-developed a logical load testing framework to certify Snapt software releases and guide marketing and product development",
         "Spearheaded move towards containerization and refactoring of Snapt software components, to avoid dependency hell and provide consistency across environments",
-        "Fostered increased infrastructure-as-code adoption and focus - Terraform, Ansible, Jenkins",
+        "Fostered increased infrastructure-as-code adoption and focus - Terraform, Ansible, CircleCI",
         "All-rounder: handled internal and external technical queries/needs/improvements across the board - including invoicing systems, security consultation services and customer deployments"
       ]
     },
@@ -142,10 +155,11 @@
         "Docker",
         "Kubernetes",
         "Ansible",
-        "Jenkins",
+        "CircleCI",
         "Packer",
         "HashiCorp",
-        "REST"
+        "REST",
+        "Sentry"
       ]
     },
     {
@@ -209,6 +223,10 @@
     },
     {
       "language": "isiXhosa",
+      "fluency": "Limited working proficiency"
+    },
+    {
+      "language": "Esperanto",
       "fluency": "Limited working proficiency"
     }
   ]

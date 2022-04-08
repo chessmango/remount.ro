@@ -75,7 +75,7 @@ ul {
   padding-left: 1em;
 }
 
-li + li {
+:not(.icon-list, .tag-list) > li + li {
   margin-top: 0.4em;
 }
 
@@ -191,6 +191,10 @@ blockquote > * + * {
 }
 
 .icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1em;
+  justify-content: center;
   list-style: none;
   padding: 0;
 }
@@ -203,13 +207,14 @@ blockquote > * + * {
 .tag-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.4em;
   list-style: none;
   padding: 0;
 }
 
 .tag-list > li {
   background: var(--color-muted);
-  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.2em;
   padding: 0.2em 0.6em;
 }
 
@@ -243,8 +248,15 @@ blockquote > * + * {
     display: contents;
   }
 
+  .icon-list {
+    flex-direction: column;
+  }
+
   .grid-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc((100% - 1em) / 2), 1fr)
+    );
   }
 }
 </style>
@@ -278,6 +290,11 @@ blockquote > * + * {
                 <span class="network">(LinkedIn)</span>
             </li>
             <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <a href="https://keybase.io/chessmango">chessmango</a>
+                <span class="network">(Keybase)</span>
+            </li>
+            <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                   <a href="https://github.com/chessmango">chessmango</a>
                 <span class="network">(GitHub)</span>
@@ -290,15 +307,35 @@ blockquote > * + * {
         <div class="stack">
             <article>
               <header>
+                <h4>DevOps/Test Engineer</h4>
+                <div class="meta">
+                  <div>
+                    <strong><a href="https://www.snapt.net">Snapt</a></strong>
+                      <span class="bullet-item">Snapt builds high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.</span>
+                  </div>
+                  <div>
+                    <time datetime="2022-04-01">Apr 2022</time> –
+                    Present
+                  </div>
+                </div>
+              </header>
+                <ul>
+                    <li><p>Moved into DevOps/testing role after getting more involved over time</p></li>
+                    <li><p>Created and maintained API and product documentation on various platforms</p></li>
+                    <li><p>More to come!</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
                 <h4>IT Systems Engineer</h4>
                 <div class="meta">
                   <div>
                     <strong><a href="https://www.snapt.net">Snapt</a></strong>
-                      <span class="bullet-item">Snapt provides high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.</span>
+                      <span class="bullet-item">Snapt builds high performance software ADCs, including load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.</span>
                   </div>
                   <div>
                     <time datetime="2020-11-01">Nov 2020</time> –
-                    Present
+                    <time datetime="2022-03-31">Mar 2022</time>
                   </div>
                 </div>
               </header>
@@ -307,7 +344,7 @@ blockquote > * + * {
                     <li><p>Created and maintained an automation framework with Terraform, to provision ephemeral, short-lived demo environments for customer ease</p></li>
                     <li><p>Co-developed a logical load testing framework to certify Snapt software releases and guide marketing and product development</p></li>
                     <li><p>Spearheaded move towards containerization and refactoring of Snapt software components, to avoid dependency hell and provide consistency across environments</p></li>
-                    <li><p>Fostered increased infrastructure-as-code adoption and focus - Terraform, Ansible, Jenkins</p></li>
+                    <li><p>Fostered increased infrastructure-as-code adoption and focus - Terraform, Ansible, CircleCI</p></li>
                     <li><p>All-rounder: handled internal and external technical queries/needs/improvements across the board - including invoicing systems, security consultation services and customer deployments</p></li>
                 </ul>
             </article>
@@ -463,10 +500,11 @@ blockquote > * + * {
                     <li>Docker</li>
                     <li>Kubernetes</li>
                     <li>Ansible</li>
-                    <li>Jenkins</li>
+                    <li>CircleCI</li>
                     <li>Packer</li>
                     <li>HashiCorp</li>
                     <li>REST</li>
+                    <li>Sentry</li>
                 </ul>
             </div>
             <div>
@@ -530,6 +568,10 @@ blockquote > * + * {
             </div>
             <div>
                 <h4>isiXhosa</h4>
+              Limited working proficiency
+            </div>
+            <div>
+                <h4>Esperanto</h4>
               Limited working proficiency
             </div>
         </div>
