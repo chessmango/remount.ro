@@ -19,3 +19,9 @@ hugo.linux
 
 # End of https://www.toptal.com/developers/gitignore/api/hugo
 
+
+# jsonresume-theme-*
+static/node_modules
+static/public
+static/package.json
+static/package-lock.json
