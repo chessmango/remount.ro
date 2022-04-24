@@ -1,9 +1,16 @@
 <div id="comments">
-    <script src="https://utteranc.es/client.js"
-    repo="{{ .Site.Params.utterances_repo }}"
-    issue-term="{{ .Site.Params.utterances_issueterm }}"
-    label="{{ .Site.Params.utterances_label }}"
-    theme="{{ .Site.Params.utterances_theme }}"
+    <script src="https://giscus.app/client.js"
+    data-repo="{{ .Site.Params.giscus_repo }}"
+    data-repo-id="{{ .Site.Params.giscus_repo-id }}"
+    data-category="{{ .Site.Params.giscus_category }}"
+    data-category-id="{{ .Site.Params.giscus_category-id }}"
+    data-mapping="{{ .Site.Params.giscus_mapping }}"
+    data-reactions-enabled="{{ .Site.Params.giscus_enable-reactions }}"
+    data-emit-metadata="{{ .Site.Params.giscus_emit-metadata }}"
+    data-input-position="{{ .Site.Params.giscus_input-position }}"
+    data-theme="{{ .Site.Params.giscus_theme }}"
+    data-lang="{{ .Site.Params.giscus_lang }}"
+    data-loading="{{ .Site.Params.giscus_loading }}"
     crossorigin="anonymous"
     async> </script>
     <noscript>Please enable JavaScript to load the comments.</noscript>
