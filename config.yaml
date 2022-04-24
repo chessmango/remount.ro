@@ -23,10 +23,18 @@ params:
       icon: linkedin
       url: https://www.linkedin.com/in/owenvalentine/
   sourceurl: https://github.com/chessmango/remount.ro
-  utterances_repo: chessmango/remount.ro
-  utterances_issueterm: pathname
-  utterances_label: comment
-  utterances_theme: preferred-color-scheme
+  giscus_repo: chessmango/remount.ro
+  giscus_repoid: MDEwOlJlcG9zaXRvcnkzNzExNDI1Mzg=
+  giscus_category: Comments
+  giscus_categoryid: DIC_kwDOFh8vis4COwcC
+  giscus_mapping: pathname
+  giscus_enablereactions: 1
+  giscus_emitmetadata: 0
+  giscus_inputposition: top
+  giscus_theme: preferred_color_scheme
+  giscus_lang: en
+  giscus_loading: lazy
+
 menu:
   main:
     - name: /
