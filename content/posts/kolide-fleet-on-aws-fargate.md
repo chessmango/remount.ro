@@ -12,6 +12,7 @@ tags:
   - iac
   - serverless
 draft: false
+comments: false
 ---
 
 [Kolide] seems like a cool company. I've never used their commercial offering, but Kolide Fleet[^fleet] is pretty and works well, and Kolide osquery Launcher[^launcher] is pretty great for [osquery] without much headache.

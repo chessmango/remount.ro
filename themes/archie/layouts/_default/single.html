@@ -31,7 +31,7 @@
 			{{ end }}
 		</div>
 	</article>
-	{{ if and .Site.Params.utterances_repo (and (not .Site.BuildDrafts) (not .Site.IsServer)) }}
+	{{ with .Params.comments }}
 	<h2>Comments</h2>
 	{{ partial "comments.html" . }}
 	{{- end}}

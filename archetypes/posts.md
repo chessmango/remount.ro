@@ -9,4 +9,5 @@ tags:
   - bar
   - foobar
 draft: true
+comments: true
 ---
