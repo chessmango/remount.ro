@@ -23,6 +23,9 @@ params:
       icon: linkedin
       url: https://www.linkedin.com/in/owenvalentine/
   sourceurl: https://github.com/chessmango/remount.ro
+  utterances_repo: chessmango/remount.ro
+  utterances_label: comment
+  utterances_theme: preferred-color-scheme
 menu:
   main:
     - name: /
