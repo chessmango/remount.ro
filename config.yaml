@@ -24,13 +24,13 @@ params:
       url: https://www.linkedin.com/in/owenvalentine/
   sourceurl: https://github.com/chessmango/remount.ro
   giscus_repo: chessmango/remount.ro
-  giscus_repo-id: MDEwOlJlcG9zaXRvcnkzNzExNDI1Mzg=
+  giscus_repoid: MDEwOlJlcG9zaXRvcnkzNzExNDI1Mzg=
   giscus_category: Comments
-  giscus_category-id: DIC_kwDOFh8vis4COwcC
+  giscus_categoryid: DIC_kwDOFh8vis4COwcC
   giscus_mapping: pathname
-  giscus_enable-reactions: 1
-  giscus_emit-metadata: 0
-  giscus_input-position: top
+  giscus_enablereactions: 1
+  giscus_emitmetadata: 0
+  giscus_inputposition: top
   giscus_theme: preferred_color_scheme
   giscus_lang: en
   giscus_loading: lazy
