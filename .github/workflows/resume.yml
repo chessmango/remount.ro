@@ -1,0 +1,44 @@
+name: json-resume HTML export/commit
+
+on:
+  push:
+    branches: [
+      main
+    ]
+
+jobs:
+  check_run:
+    runs-on: ubuntu-latest
+    if: "! contains(github.event.head_commit.message, '[ci skip]')"
+    steps:
+      - run: echo "${{ github.event.head_commit.message }}"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: check_run
+    steps:
+      - uses: actions/checkout@v3
+      - uses: kelvintaywl/action-jsonresume-export@v1
+        name: Export json-resume HTML
+        with:
+          theme: even
+          resume_filepath: static/resume.json
+          output_filepath: static/resume.html
+      - name: Commit exported HTML
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -n "$(git status --porcelain static/resume.html)" ]; then
+            git add static/resume.html
+            git commit -m "[ci skip] chore(static/resume.html): update json-resume HTML"
+            echo ::set-output name=exit_code::0
+          else
+            echo ::set-output name=exit_code::1
+          fi
+      - name: Push exported HTML
+        uses: ad-m/github-push-action@master
+        if: steps.commit.outputs.exit_code == 0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
