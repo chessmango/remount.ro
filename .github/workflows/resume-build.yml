@@ -2,9 +2,8 @@ name: json-resume HTML export/commit
 
 on:
   push:
-    branches: [
-      main
-    ]
+    paths:
+      - 'static/resume.json'
 
 jobs:
   check_run:
