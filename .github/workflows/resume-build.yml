@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: check_run
     steps:
       - uses: actions/checkout@v3
       - uses: chessmango/action-jsonresume-export@v1.1
@@ -24,7 +23,7 @@ jobs:
           git config --local user.name "Owen Valentine"
           if [ -n "$(git status --porcelain static/resume.html)" ]; then
             git add static/resume.html
-            git commit -m "[ci skip] chore(static/resume.html): update json-resume HTML"
+            git commit -m "[actions skip] chore(static/resume.html): update json-resume HTML"
             echo ::set-output name=exit_code::0
           else
             echo ::set-output name=exit_code::1
