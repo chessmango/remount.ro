@@ -39,10 +39,12 @@
       "description": "Snapt builds high performance software ADCs, comprising load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
       "position": "DevOps/Test Engineer",
       "startDate": "2022-04-01",
+      "endDate": "2022-08-31",
       "highlights": [
-        "Moved into DevOps/testing role after getting more involved over time",
+        "Established manual testing procedure for Snapt products",
+        "Managed and owned non-production infrastructure - including Nginx/PHP-FPM, InfluxDB, Redis and PosgreSQL",
         "Created and maintained API and product documentation on various platforms",
-        "More to come"
+        "Provided third-line assistance to support engineering"
       ]
     },
     {
@@ -57,7 +59,7 @@
         "Created and maintained an automation framework with Terraform, to provision ephemeral, short-lived demo environments for customer ease",
         "Co-developed a logical load testing framework to certify Snapt software releases and guide marketing and product development",
         "Spearheaded move towards containerization and refactoring of Snapt software components, to avoid dependency hell and provide consistency across environments",
-        "Fostered increased infrastructure-as-code adoption and focus - Terraform, Ansible, CircleCI",
+        "Fostered increased infrastructure-as-code and CI/CD adoption and focus - Terraform, Ansible, CircleCI",
         "All-rounder: handled internal and external technical queries/needs/improvements across the board - including invoicing systems, security consultation services and customer deployments"
       ]
     },
