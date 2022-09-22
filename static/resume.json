@@ -136,16 +136,16 @@
   ],
   "certificates": [
     {
-      "name": "AWS Certified Solutions Architect - Associate",
-      "date": "2019-10-15",
-      "url": "https://www.credly.com/badges/4ff8f581-2114-47a5-8f73-c7b0cf3e2b63",
-      "issuer": "Amazon Web Services"
-    },
-    {
       "name": "CKA: Certified Kubernetes Administrator",
       "date": "2021-11-30",
       "url": "https://www.credly.com/badges/0936fb6d-5039-4700-b1d7-597e02fa584a",
       "issuer": "The Linux Foundation"
+    },
+    {
+      "name": "AWS Certified Solutions Architect - Associate",
+      "date": "2019-10-15",
+      "url": "https://www.credly.com/badges/4ff8f581-2114-47a5-8f73-c7b0cf3e2b63",
+      "issuer": "Amazon Web Services"
     }
   ],
   "skills": [
