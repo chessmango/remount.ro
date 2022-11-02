@@ -42,7 +42,7 @@
       "endDate": "2022-08-31",
       "highlights": [
         "Established manual testing procedure for Snapt products",
-        "Managed and owned non-production infrastructure - including Nginx/PHP-FPM, InfluxDB, Redis and PosgreSQL",
+        "Managed and owned non-production infrastructure - including Nginx/PHP-FPM, InfluxDB, Redis and PostgreSQL",
         "Created and maintained API and product documentation on various platforms",
         "Provided third-line assistance to support engineering"
       ]
