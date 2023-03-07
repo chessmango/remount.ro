@@ -1,4 +1,4 @@
-name: JSON Résumé HTML render/commit
+name: JSON Résumé render
 
 on:
   pull_request:
@@ -36,5 +36,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
           git add static/resume.html static/resume.pdf
-          git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
+          git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé"
           git push
