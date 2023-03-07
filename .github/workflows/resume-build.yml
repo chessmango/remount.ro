@@ -13,6 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         id: checkout
+        with:
+          fetch-depth: 0
       - name: Render JSON Résumé HTML
         uses: chessmango/action-resumed-render@v1.0.3
         id: render
