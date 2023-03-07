@@ -6,11 +6,6 @@ on:
       - main
     paths:
       - 'static/resume.json'
-  push:
-    branches:
-      - main
-    paths:
-      - 'static/resume.json'
 
 jobs:
   build:
@@ -40,5 +35,6 @@ jobs:
       - name: Push rendered HTML
         id: push
         if: steps.commit.outputs.EXIT_CODE == 0
-        run: |
-          git push origin HEAD:"$GITHUB_REF"
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          branch: ${{ github.head_ref }}
