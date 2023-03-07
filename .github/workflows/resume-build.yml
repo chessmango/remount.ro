@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v3
         id: checkout
       - name: Render JSON Résumé HTML
-        uses: chessmango/action-resumed-render@v1.0.0
+        uses: chessmango/action-resumed-render@v1.0.2
         id: render
       - name: Commit rendered HTML
         id: commit
