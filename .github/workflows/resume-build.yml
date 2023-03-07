@@ -37,4 +37,5 @@ jobs:
         if: steps.commit.outputs.EXIT_CODE == 0
         uses: ad-m/github-push-action@v0.6.0
         with:
+          github_token: ${{ github.token }}
           branch: ${{ github.head_ref }}
