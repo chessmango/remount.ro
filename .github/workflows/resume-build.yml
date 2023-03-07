@@ -21,6 +21,10 @@ jobs:
       - name: Render JSON Résumé HTML
         uses: chessmango/action-resumed-render@v1.0.2
         id: render
+        with:
+          theme: jsonresume-theme-even
+          input_file: static/resume.json
+          output_file: static/resume.html
       - name: Commit rendered HTML
         id: commit
         run: |
