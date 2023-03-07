@@ -11,23 +11,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        id: checkout
+      - id: checkout
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
-      - name: Render JSON Résumé HTML
+      - id: render-html
+        name: Render JSON Résumé HTML
         uses: chessmango/action-resumed-render@v1.0.3
-        id: render
         with:
           theme: jsonresume-theme-even
           input_file: static/resume.json
           output_file: static/resume.html
-      - name: Commit/push rendered HTML
-        id: commit-push
+      - id: render-pdf
+        name: Render JSON Résumé PDF
+        uses: fifsky/html-to-pdf-action@0.1.0
+        with:
+          htmlFile: static/resume.html
+          outputFile: static/resume.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+      - id: commit-push
+        name: Commit/push rendered HTML
         run: |
           git config user.email "github-actions@github.com"
           git config user.name "github-actions"
-          git add static/resume.html
+          git add static/resume.html static/resume.pdf
           git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
           git push
