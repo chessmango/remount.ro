@@ -20,22 +20,11 @@ jobs:
           theme: jsonresume-theme-even
           input_file: static/resume.json
           output_file: static/resume.html
-      - name: Commit rendered HTML
-        id: commit
+      - name: Commit/push rendered HTML
+        id: commit-push
         run: |
-          git config --local user.email "chessmango@users.noreply.github.com"
-          git config --local user.name "Owen Valentine"
-          if [ -n "$(git status --porcelain static/resume.html)" ]; then
-            git add static/resume.html
-            git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
-            echo "EXIT_CODE=0" >> "$GITHUB_OUTPUT"
-          else
-            echo "EXIT_CODE=1" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Push rendered HTML
-        id: push
-        if: steps.commit.outputs.EXIT_CODE == 0
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ github.token }}
-          branch: ${{ github.head_ref }}
+          git config user.email "github-actions@github.com"
+          git config user.name "github-actions"
+          git add static/resume.html
+          git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
+          git push
