@@ -25,7 +25,7 @@ jobs:
           output_file: static/resume.html
       - id: render-pdf
         name: Render JSON Résumé PDF
-        uses: fifsky/html-to-pdf-action@0.1.0
+        uses: fifsky/html-to-pdf-action@v0.1.0
         with:
           htmlFile: static/resume.html
           outputFile: static/resume.pdf
