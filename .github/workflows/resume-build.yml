@@ -33,12 +33,12 @@ jobs:
           if [ -n "$(git status --porcelain static/resume.html)" ]; then
             git add static/resume.html
             git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
-            echo ::set-output name=exit_code::0
+            echo "EXIT_CODE=0" >> "$GITHUB_OUTPUT"
           else
-            echo ::set-output name=exit_code::1
+            echo "EXIT_CODE=1" >> "$GITHUB_OUTPUT"
           fi
       - name: Push rendered HTML
         id: push
-        if: steps.commit.outputs.exit_code == 0
+        if: steps.commit.outputs.EXIT_CODE == 0
         run: |
-          git push
+          git push origin HEAD:"$GITHUB_REF"
