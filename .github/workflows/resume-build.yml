@@ -1,7 +1,14 @@
-name: json-resume HTML export/commit
+name: JSON Résumé HTML render/commit
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'static/resume.json'
   push:
+    branches:
+      - main
     paths:
       - 'static/resume.json'
 
@@ -10,27 +17,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: chessmango/action-jsonresume-export@v1.1
-        name: Export json-resume HTML
-        with:
-          theme: even
-          resume_filepath: static/resume.json
-          output_filepath: static/resume.html
-      - name: Commit exported HTML
+        id: checkout
+      - name: Render JSON Résumé HTML
+        uses: chessmango/action-resumed-render@v1.0.0
+        id: render
+      - name: Commit rendered HTML
         id: commit
         run: |
           git config --local user.email "chessmango@users.noreply.github.com"
           git config --local user.name "Owen Valentine"
           if [ -n "$(git status --porcelain static/resume.html)" ]; then
             git add static/resume.html
-            git commit -m "[actions skip] chore(static/resume.html): update json-resume HTML"
+            git commit -m "[actions skip] chore(static/resume.html): render JSON Résumé HTML"
             echo ::set-output name=exit_code::0
           else
             echo ::set-output name=exit_code::1
           fi
-      - name: Push exported HTML
-        uses: ad-m/github-push-action@master
+      - name: Push rendered HTML
+        id: push
         if: steps.commit.outputs.exit_code == 0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        run: |
+          git push
