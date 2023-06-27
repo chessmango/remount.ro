@@ -37,7 +37,7 @@
       "name": "Entersekt",
       "url": "https://www.entersekt.com",
       "position": "Software Engineer: DevOps",
-      "summary": "I was part of the DevOps team at Entersekt, focusing on testing, CI and related infrastructure",
+      "summary": "I was part of the DevOps team at Entersekt, responsible for CI/CD, packaging and related infrastructure, with focus on PCI compliance and artifacts. This involved Kubernetes, GitLab, Xray and an internal BDD framework based on Cucumber.",
       "startDate": "2023-01-01",
       "endDate": "2023-06-30"
     },
@@ -45,6 +45,7 @@
       "name": "Snapt",
       "url": "https://www.snapt.net",
       "position": "DevOps/Test Engineer",
+      "summary": "Establishing this role at Snapt, I initially focused on manual product testing and began to set up automated pipelines before the company shut down. This involved Docker/Compose, GitHub and CircleCI.",
       "startDate": "2022-04-01",
       "endDate": "2022-08-31",
       "highlights": [
