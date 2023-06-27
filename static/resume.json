@@ -34,9 +34,16 @@
   },
   "work": [
     {
+      "name": "Entersekt",
+      "url": "https://www.entersekt.com",
+      "position": "Software Engineer: DevOps",
+      "summary": "I was part of the DevOps team at Entersekt, focusing on testing, CI and related infrastructure",
+      "startDate": "2023-01-01",
+      "endDate": "2023-06-30"
+    },
+    {
       "name": "Snapt",
       "url": "https://www.snapt.net",
-      "description": "Snapt builds high performance software ADCs, comprising load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
       "position": "DevOps/Test Engineer",
       "startDate": "2022-04-01",
       "endDate": "2022-08-31",
@@ -50,7 +57,6 @@
     {
       "name": "Snapt",
       "url": "https://www.snapt.net",
-      "description": "Snapt builds high performance software ADCs, comprising load balancing, WAF, GSLB and web acceleration for improved availability, performance and security.",
       "position": "IT Systems Engineer",
       "startDate": "2020-11-01",
       "endDate": "2022-03-31",
@@ -66,7 +72,6 @@
     {
       "name": "Amazon Web Services",
       "url": "https://aws.amazon.com",
-      "description": "Amazon Web Services offers reliable, scalable, and  inexpensive cloud computing services. Free to join, pay only for what you use.",
       "position": "Cloud Support Engineer",
       "startDate": "2019-06-01",
       "endDate": "2020-09-30",
@@ -81,7 +86,6 @@
     {
       "name": "Umanix",
       "url": "https://www.umanix.co.za",
-      "description": "Umanix is a small but above-weight-punching Managed Service Provider specializing in Linux, virtualization and cool internet tech",
       "position": "Senior Systems/Network Engineer",
       "startDate": "2018-02-01",
       "endDate": "2019-05-31",
@@ -95,7 +99,6 @@
     {
       "name": "Huge Networks",
       "url": "https://www.hugenetworks.co.za",
-      "description": "Huge Networks is a national Internet Service Provider, providing ADSL, Fibre and Wireless access at various levels, with an enterprise/ B2B focus",
       "position": "System Administrator",
       "startDate": "2016-02-01",
       "endDate": "2018-01-31",
@@ -107,7 +110,6 @@
     {
       "name": "Huge Networks",
       "url": "https://www.hugenetworks.co.za",
-      "description": "Huge Networks is a national Internet Service Provider, providing ADSL, Fibre and Wireless access at various levels, with an enterprise/telecoms B2B focus",
       "position": "Technical Support Agent",
       "startDate": "2015-08-01",
       "endDate": "2016-01-31",
@@ -119,7 +121,6 @@
     {
       "name": "Hudson Park Primary School",
       "url": "https://www.hudsonpark.co.za",
-      "description": "Hudson Park Primary School is a prominent Eastern Cape institution, educating >1000 students annually",
       "position": "System Administrator",
       "startDate": "2012-03-01",
       "endDate": "2015-07-31"
