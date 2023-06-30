@@ -159,14 +159,15 @@
       "level": "Professional",
       "keywords": [
         "Terraform",
+        "Terragrunt",
         "Docker",
         "Kubernetes",
         "Ansible",
         "CircleCI",
         "Packer",
-        "HashiCorp",
         "REST",
-        "Sentry"
+        "Sentry",
+        "GitLab CI"
       ]
     },
     {
@@ -195,6 +196,7 @@
         "CentOS",
         "Rocky Linux",
         "Ubuntu",
+        "Debian",
         "Kernel",
         "Troubleshooting"
       ]
@@ -211,11 +213,11 @@
         "OCI",
         "VPC",
         "ECS",
+        "EKS",
+        "Fargate",
         "EC2",
         "RDS",
-        "ElastiCache",
-        "Fargate",
-        "Multi-cloud"
+        "ElastiCache"
       ]
     }
   ],
