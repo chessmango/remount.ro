@@ -59,6 +59,7 @@
       "name": "Snapt",
       "url": "https://www.snapt.net",
       "position": "IT Systems Engineer",
+      "summary": "In this role at Snapt, I bolstered pre-sales engineering and drove automation and infrastructure-as-code initiatives. This involved Terraform, Ansible and Packer.",
       "startDate": "2020-11-01",
       "endDate": "2022-03-31",
       "highlights": [
@@ -74,6 +75,7 @@
       "name": "Amazon Web Services",
       "url": "https://aws.amazon.com",
       "position": "Cloud Support Engineer",
+      "summary": "My role at AWS was to resolve customer support queries, focusing on large enterprise customers with complex environments.",
       "startDate": "2019-06-01",
       "endDate": "2020-09-30",
       "highlights": [
@@ -88,6 +90,7 @@
       "name": "Umanix",
       "url": "https://www.umanix.co.za",
       "position": "Senior Systems/Network Engineer",
+      "summary": "My role at Umanix was mainly focused on a single customer, managing their entire software infrastructure. This involved Proxmox, LXC, Wildfly and MySQL.",
       "startDate": "2018-02-01",
       "endDate": "2019-05-31",
       "highlights": [
