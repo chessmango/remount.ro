@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
       - id: render-html
         name: Render JSON Résumé HTML
-        uses: chessmango/action-resumed-render@v1.1.0
+        uses: chessmango/action-resumed-render@v1.1.1
         with:
           theme: jsonresume-theme-even
           input_file: static/resume.json
